@@ -6,7 +6,6 @@ with open('password.txt') as f:
 textfile = textfile.split('\n')
 
 for i in textfile:
-    result = False
     password = i.split(' ')[1]
     email = i.split(' ')[0]
     b = list(password)
@@ -20,10 +19,10 @@ for i in textfile:
                 if len(count_symb) >= 2:
                     print(email, password, 'Good password for use')
                 else:
-                    print(email, password, 'Not enought Symbols')
+                    print(email, password, 'Not enough Symbols')
             else:
-                print(email, password, 'Not enought Letters')
+                print(email, password, 'Not enough Letters')
         else:
-            print(email, password, 'Not enought Numbers')
+            print(email, password, 'Not enough Numbers')
     else:
         print(email, password, 'Too short')
